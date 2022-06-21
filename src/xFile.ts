@@ -7,7 +7,7 @@ import sourceComments from '~root/sourceComments'
 import filesAreSync from '~root/filesAreSync'
 import fileContent from '~root/fileContent'
 import iso8061DateString from '~root/iso8061DateString'
-import appRoot from 'app-root-path'
+//import appRoot from 'app-root-path'
 
 export default class XFile{
   fileName:str
@@ -75,14 +75,14 @@ export default class XFile{
       .replace( /<@5l4s8\/]/g, '\\' )
 
     //console.log( 'RESULT JS', result )
-    fileSys.writeFileSync( `${ appRoot }/${ this.pair.fileName }` , result )
+    fileSys.writeFileSync( this.pair.fileName, result )
   }
   private toJson(){
     let js:obj = safeEval( this.content )
     let json:str = jsPrettyString( js, 'json' )
     //console.log( 'RESULT JSON', json )
-    fileSys.writeFileSync( `${ appRoot }/${ this.pair.fileName }` , json )
-    fileSys.appendFileSync( `${ appRoot }/.package.json_history`,
+    fileSys.writeFileSync( this.pair.fileName, json )
+    fileSys.appendFileSync( `${ process.cwd() }/.package.json_history`,
       `\n\n==========Updated ${ iso8061DateString() }==================================
       \n${ json }\n` )
   }
