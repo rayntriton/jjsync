@@ -1,6 +1,6 @@
 {
   name : "jjsync",
-  version : "0.1.3",
+  version : "0.1.5",
   main : "dist/jjsync.js",
   bin : {
     jjsync : "dist/jjsync.js"

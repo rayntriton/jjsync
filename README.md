@@ -7,7 +7,6 @@ You just edited your package.jsos, you commented some task:
 ```js
 {
   name : "jjsync"
-  },
   scripts : {
     task1 : "echo task1",
     task2 : "echo task2",
@@ -18,8 +17,7 @@ You just edited your package.jsos, you commented some task:
 then package.json syncs: 
 ```json
 {
-  "name" : "jjsync"
-  },
+  "name" : "jjsync",
   "scripts" : {
     "task1" : "echo task1",
     "task2" : "echo task2"

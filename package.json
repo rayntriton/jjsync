@@ -1,51 +1,51 @@
 {
-  "name": "jjsync",
-  "version": "0.1.4",
-  "main": "dist/jjsync.js",
-  "bin": {
-    "jjsync": "dist/jjsync.js"
+  "name" : "jjsync",
+  "version" : "0.1.5",
+  "main" : "dist/jjsync.js",
+  "bin" : {
+    "jjsync" : "dist/jjsync.js"
   },
-  "license": "MIT",
-  "scripts": {
-    "typeCheck": "clear && clear; echo _START_ && nodemon --exec \"tsc --noEmit\"",
-    "typeCheckWatch": "yarn run typeCheck -- --watch",
-    "build": "yarn run buildTypes && yarn run buildJs",
-    "buildTypes": "tsc --emitDeclarationOnly",
-    "buildJs": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline",
-    "start": "clear && clear; echo _START_ && nodemon --exec \"yarn build; node dist/jjSync.js\"",
-    "bin": "echo '#!/usr/bin/env node' > dist/jjsync.js; cat dist/jjSync.js >> dist/jjsync.js"
+  "license" : "MIT",
+  "scripts" : {
+    "typeCheck" : "clear && clear; echo _START_ && nodemon --exec \"tsc --noEmit\"",
+    "typeCheckWatch" : "yarn run typeCheck -- --watch",
+    "build" : "yarn run buildTypes && yarn run buildJs",
+    "buildTypes" : "tsc --emitDeclarationOnly",
+    "buildJs" : "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline",
+    "start" : "clear && clear; echo _START_ && nodemon --exec \"yarn build; node dist/jjSync.js\"",
+    "bin" : "echo '#!/usr/bin/env node' > dist/jjsync.js; cat dist/jjSync.js >> dist/jjsync.js"
   },
-  "devDependencies": {
-    "@babel/cli": "^7.17.6",
-    "@babel/core": "^7.17.5",
-    "@babel/plugin-proposal-class-properties": "^7.16.7",
-    "@babel/plugin-proposal-object-rest-spread": "^7.17.3",
-    "@babel/preset-env": "^7.16.11",
-    "@babel/preset-typescript": "^7.16.7",
-    "@types/app-root-path": "^1.2.4",
-    "@types/lodash": "^4.14.180",
-    "babel-plugin-module-resolver": "^4.1.0",
-    "lodash": "^4.17.21",
-    "nodemon": "^2.0.15",
-    "@types/node": "^17.0.23"
+  "devDependencies" : {
+    "@babel/cli" : "^7.17.6",
+    "@babel/core" : "^7.17.5",
+    "@babel/plugin-proposal-class-properties" : "^7.16.7",
+    "@babel/plugin-proposal-object-rest-spread" : "^7.17.3",
+    "@babel/preset-env" : "^7.16.11",
+    "@babel/preset-typescript" : "^7.16.7",
+    "@types/app-root-path" : "^1.2.4",
+    "@types/lodash" : "^4.14.180",
+    "babel-plugin-module-resolver" : "^4.1.0",
+    "lodash" : "^4.17.21",
+    "nodemon" : "^2.0.15",
+    "@types/node" : "^17.0.23"
   },
-  "nodemonConfig": {
-    "ignore": [
+  "nodemonConfig" : {
+    "ignore" : [
       ".git",
       "node_modules",
       "dist",
       "tmp",
       "package.json"
     ],
-    "delay": 2500,
-    "ext": "js,json,html,ts",
-    "events": {
-      "restart--": "clear && clear && echo RESTARTED",
-      "restart": "echo RESTARTED"
+    "delay" : 2500,
+    "ext" : "js,json,html,ts",
+    "events" : {
+      "restart--" : "clear && clear && echo RESTARTED",
+      "restart" : "echo RESTARTED"
     }
   },
-  "dependencies": {
-    "typescript": "^4.6.2",
-    "app-root-path": "^3.0.0"
+  "dependencies" : {
+    "typescript" : "^4.6.2",
+    "app-root-path" : "^3.0.0"
   }
 }
