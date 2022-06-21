@@ -1,6 +1,6 @@
 {
   name : "jjsync",
-  version : "1.0.0",
+  version : "0.1.0",
   main : "dist/jjsync.js",
   bin : {
     jjsync : "dist/jjsync.js"
@@ -15,8 +15,7 @@
     buildJs : "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline",
     //start : "clear && clear; echo _START_ && nodemon --exec \"yarn build; node dist/jsAsJson.js js=tmp/hello.jsc json=tmp/hello.json\"",
     start : "clear && clear; echo _START_ && nodemon --exec \"yarn build; node dist/jjSync.js\"",
-    bin : "echo '#!/usr/bin/env node' > dist/jjsync.js; cat dist/jjSync.js >> dist/jjsync.js",
-    arry: [{a:1,b:[{c:3},'d']}]
+    bin : "echo '#!/usr/bin/env node' > dist/jjsync.js; cat dist/jjSync.js >> dist/jjsync.js"
   },
   devDependencies : {
     "@babel/cli" : "^7.17.6",
