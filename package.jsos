@@ -1,11 +1,21 @@
 {
   name : "jjsync",
-  version : "0.1.5",
+  version : "0.1.11-1+e",
+  description : "watches two files, a json and a js, ( defaults are ```package.json``` and ```package.jsos``` ) and makes them sync'ed",
+  author : "rayntriton@gmail.com",
+  homepage : "https://github.com/rayntriton/jjsync",
+  repository : {
+    type : "git",
+    url : "https://github.com/rayntriton/jjsync.git"
+  },
+  bugs : {
+    url: "https://github.com/rayntriton/jjsync/issues"
+  },
+  license : "MIT",
   main : "dist/jjsync.js",
   bin : {
     jjsync : "dist/jjsync.js"
   },
-  license : "MIT",
   scripts : {
     //"type-check" : "clear && clear; echo _START_ && nodemon --exec \"tsc --noEmit\"",
     typeCheck : "clear && clear; echo _START_ && nodemon --exec \"tsc --noEmit\"",
@@ -49,5 +59,18 @@
     "app-root-path" : "^3.0.0",
     lodash : "^4.17.21",
     "@types/lodash" : "^4.14.180"
-  }
+  },
+  keywords : [
+    "synchronize",
+    "sync",
+    "package.json",
+    "package.js",
+    "package.jsos",
+    "json",
+    "js",
+    "jsos",
+    "alternative",
+    "comments",
+    "anotations"
+  ]
 }
